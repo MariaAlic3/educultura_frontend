@@ -1,27 +1,27 @@
 
 export interface Eventos {
-    id: String;
-    cidade: String;
+    id: string;
+    cidade: string;
     evento: String;
     gratuito: boolean;
 }
 
 export interface Museus {
-    id: String;
+    id: string;
     cidade: String;
-    nome: String;
+    nome: string;
     gratuito: boolean;
 }
 
 export interface Personalidades {
-    id: String;
-    nome: String;
-    descricao: String;
+    id: string;
+    nome: string;
+    descricao: string;
 }
 
 export interface Universidades {
-    id: String;
-    nome: String;
-    cotas: String;
+    id: string;
+    nome: string;
+    cotas: string;
 }
 
