@@ -26,9 +26,9 @@ export default function Header() {
         <ul className="flex gap-8 text-[#5D3FD3] font-medium mx-4">
             <li><Link href="/" target="_blank">Início</Link></li>
             <li><Link href="/Universidades" target="_blank">Universidades</Link></li>
-            <li><Link href="/Universidades" target="_blank">Museus</Link></li>
-            <li><Link href="/Universidades" target="_blank">Personalidades</Link></li>
-            <li><Link href="/Universidades" target="_blank">Eventos</Link></li>
+            <li><Link href="/Museus" target="_blank">Museus</Link></li>
+            <li><Link href="/Personalidades" target="_blank">Personalidades</Link></li>
+            <li><Link href="/>Eventos" target="_blank">Eventos</Link></li>
           </ul>
       </nav>
     </header>
