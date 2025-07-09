@@ -54,8 +54,13 @@ export default function Home() {
             href={`/${cat.rota}`}
             className="block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow cursor-pointer overflow-hidden"
           >
-            <img src={cat.imagem} alt={cat.nome} className="w-full h-40 object-cover rounded-t-lg" />
-         
+           <Image
+  src={cat.imagem}
+  alt={cat.nome}
+  width={400}
+  height={250}
+  className="rounded-t-lg object-cover"
+/>
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2 text-[#5D3FD3]">{cat.nome}</h2>
               <p className="text-gray-700">{cat.descricao}</p>

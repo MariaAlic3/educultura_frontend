@@ -20,81 +20,82 @@ export async function fetchFromEduCulturaApi(endpoint: string) {
 }
 
 
-// Fazendo de acordo com o código do Dan
-
 // EVENTOS 
-// Função para fazer uma requisição GET para obter eventos
+
+// Buscar todos os eventos
 export async function fetchEventos() {
-    const response = await fetch(`${API}/eventos`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar eventos: ${response.statusText}`);
-    }
-    return await response.json();
+  const response = await fetch(`${API}/eventos`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar eventos: ${response.statusText}`);
+  }
+  return await response.json();
 }
 
-// Função para fazer busca de uma requisição GET para um Evento em especifico
-export async function fetchEventoById(id: string) {
-    const response = await fetch(`{API}/eventos/${id}`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar evento com ID ${id}: ${response.statusText}`);
-    }
-    return response.json();
+// Buscar eventos por cidade (parâmetro 'cidade' ao invés de 'id')
+export async function fetchEventosByCidade(cidade: string) {
+  const response = await fetch(`${API}/eventos/${encodeURIComponent(cidade)}`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar eventos na cidade ${cidade}: ${response.statusText}`);
+  }
+  return await response.json();
 }
-
 
 // MUSEUS
-// Função para fazer uma requisição GET para obter museus
+
+// Buscar todos os museus
 export async function fetchMuseus() {
-    const response = await fetch(`${API}/museus`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar museus: ${response.statusText}`);
-    }
-    return response.json();
+  const response = await fetch(`${API}/museus`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar museus: ${response.statusText}`);
+  }
+  return await response.json();
 }
 
-// Função para fazer busca de uma requisição GET para um Museu em especifico
-export async function fetchMuseusById(id: String) {
-    const response = await fetch(`{API}/museus/${id}`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar museu com ID ${id}: ${response.statusText}`);
-    }
-    return response.json();
+// Buscar museus por cidade
+export async function fetchMuseusByCidade(cidade: string) {
+  const response = await fetch(`${API}/museus/${encodeURIComponent(cidade)}`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar museus na cidade ${cidade}: ${response.statusText}`);
+  }
+  return await response.json();
 }
-
 
 // PERSONALIDADES
+
+// Buscar todas as personalidades
 export async function fetchPersonalidades() {
-    const response = await fetch(`${API}/personalidades`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar personalidades: ${response.statusText}`);
-    }
-    return response.json();
+  const response = await fetch(`${API}/personalidades`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar personalidades: ${response.statusText}`);
+  }
+  return await response.json();
 }
 
-// Função para fazer busca de uma requisição GET para uma Personalidade em especifico
-export async function fetchPersonalidadeById(id: String) {
-    const response = await fetch(`${API}/personalidade/${id}`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar personalidade com ID ${id}: ${response.statusText}`);
-    }
-    return response.json();
+// Buscar personalidade por nome
+export async function fetchPersonalidadeByNome(nome: string) {
+  const response = await fetch(`${API}/personalidade/${encodeURIComponent(nome)}`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar personalidade com nome ${nome}: ${response.statusText}`);
+  }
+  return await response.json();
 }
-
 
 // UNIVERSIDADES
+
+// Buscar todas as universidades
 export async function fetchUniversidades() {
-    const response = await fetch(`${API}/universidades`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar universidades: ${response.statusText}`);
-    }
-    return response.json();
+  const response = await fetch(`${API}/universidades`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar universidades: ${response.statusText}`);
+  }
+  return await response.json();
 }
 
-// Função para fazer busca de uma requisição GET para uma Universidade em especifico
-export async function fetchUniversidadeById(id: String) {
-    const response = await fetch (`${API}/universidade/${id}`);
-    if (!response.ok) {
-        throw new Error(`Erro ao buscar universidade com ID ${id}: ${response.statusText}`);
-    }
-    return response.json();
+// Buscar universidade por nome
+export async function fetchUniversidadeByNome(nome: string) {
+  const response = await fetch(`${API}/universidade/${encodeURIComponent(nome)}`);
+  if (!response.ok) {
+    throw new Error(`Erro ao buscar universidade com nome ${nome}: ${response.statusText}`);
+  }
+  return await response.json();
 }
