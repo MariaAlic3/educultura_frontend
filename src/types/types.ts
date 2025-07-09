@@ -2,13 +2,13 @@
 export interface Eventos {
     id: string;
     cidade: string;
-    evento: String;
+    evento: string;
     gratuito: boolean;
 }
 
 export interface Museus {
     id: string;
-    cidade: String;
+    cidade: string;
     nome: string;
     gratuito: boolean;
 }
